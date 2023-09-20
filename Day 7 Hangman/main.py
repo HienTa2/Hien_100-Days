@@ -15,6 +15,8 @@ lives = len(stages) - 1  # Setting lives based on the number of stages you have.
 
 print(logo)  # Assuming you want to display the game logo at the start.
 
+guessed_letters = []  # Step 1: Initialize an empty list for guessed letters.
+
 # Main game loop
 while "_" in display and lives > 0:
     guess = input("Guess a letter: ").lower()
@@ -22,6 +24,8 @@ while "_" in display and lives > 0:
     # If the guessed letter is already in the display, inform the user.
     if guess in display:
         print(f"You've already guessed the letter {guess}")
+    else:
+        guessed_letters.append(guess)  # Step 2: Add the guessed letter to the list.
 
     # Check the chosen word's position and then if match, replace with the letter.
     for position in range(len(chosen_word)):
@@ -35,6 +39,8 @@ while "_" in display and lives > 0:
         lives -= 1
         print(stages[lives])
 
+    # Display the list of guessed letters to the user.
+    print(f"Guessed Letters: {', '.join(guessed_letters)}")
     print(f"{' '.join(display)}")  # To display the current state of guessed word.
 
 # End of the game
