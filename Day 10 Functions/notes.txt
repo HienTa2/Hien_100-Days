@@ -1,0 +1,5 @@
+Function with Outputs
+
+def my_funciton():
+   result = 3 * 2
+   return  
