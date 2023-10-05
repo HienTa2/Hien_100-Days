@@ -1,5 +1,4 @@
 Function with Outputs
 
-def my_funciton():
-   result = 3 * 2
-   return  
+Function Docstrings: Each function is documented with a docstring,
+providing information about its purpose, parameters, and return value(s).
