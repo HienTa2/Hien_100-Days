@@ -100,4 +100,5 @@ def calculator():
 while True:
     calculator()
     if input("Type 'n' to exit, or any other key to start a new calculation: ") == 'n':
+        print("Goodbye.")
         break
