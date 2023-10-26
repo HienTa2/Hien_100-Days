@@ -1,0 +1,1 @@
+[Key.shift_r]Hello[Key.space]world.[Key.enter][Key.esc]hello[Key.space]world[Key.space]this[Key.space]is[Key.space]a[Key.space]test[Key.enter][Key.esc]
