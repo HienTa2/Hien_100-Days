@@ -1,4 +1,7 @@
 import random
+from art import logo
+
+print(logo)
 
 
 # Function to deal a card from the deck
@@ -17,6 +20,7 @@ def calculate_score(cards):
         return 0
     # Adjust for Ace (11 to 1) if total score exceeds 21
     while 11 in cards and sum(cards) > 21:
+        # remove 11 and make Ace to 1
         cards.remove(11)
         cards.append(1)
     return sum(cards)
@@ -27,8 +31,8 @@ while True:
     # Initialization of cards and scores
     user_card = []
     computer_card = []
-    user_hands = calculate_score(user_card)
-    computer_hands = calculate_score(computer_card)
+    user_hands = calculate_score(user_card)  # Initialization of user's hand
+    computer_hands = calculate_score(computer_card)  # Initialization of computer's hand
     is_game_over = False
 
     # Deal the initial two cards to the player and the computer
@@ -63,8 +67,11 @@ while True:
 
     # Determine and display the game outcome
     print(f"\nComputer's final hand: {computer_card}, final score: {computer_hands}")
+    print(f"\nYour cards: {user_card}, current score: {user_hands}")
     if computer_hands == 0:
         print("Computer has Blackjack! You lose 😭")
+    elif user_hands == 0:
+        print("Blackjack you win 😄")
     elif user_hands > 21:
         print("You went over. You lose 😭")
     elif computer_hands > 21:
