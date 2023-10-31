@@ -38,7 +38,7 @@ def check_answer(guess, number):
         print("Too low.")
         return False
     else:
-        print(f"You got it! The answer is {number}")
+        print(f"You got it! 😄😄🎉🥳 The answer is {number}")
         return True
 
 
