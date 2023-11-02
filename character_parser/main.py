@@ -19,14 +19,14 @@ def find_note_txt_with_line_numbers(xml_file):
     for note_txt in root.iter('NOTE_TXT'):
         # Calculate the length of the text content, removing any leading or trailing whitespaces
         text_length = len(note_txt.text.strip()) if note_txt.text else 0
-        # Check if the text content is 1000 characters or more
+        # Check if the text content number of characters
         if text_length >= 3000:
             # Print a message showing the line number and character count of the tag
             print(
-                f"NOTE_TXT with more than 1000 characters found at line {note_txt.sourceline}: {text_length} characters")
+                f"NOTE_TXT with number of characters found at line {note_txt.sourceline}: {text_length} characters")
             # Uncomment the following line if you want to print the content of the tag
             # print(note_txt.text.strip())
 
 
-# Call the function with the name of the XML file and put in the same directory
-find_note_txt_with_line_numbers('PUT XML File here')
+# Example usage
+find_note_txt_with_line_numbers('example.xml')
