@@ -1,6 +1,7 @@
 import random
 from art import logo, vs
 from game_data import data
+from replit import clear
 
 # Display the game logo.
 print(logo)
@@ -56,6 +57,10 @@ while True:
 
     # Determine if the user's guess is correct.
     is_correct = check_answers(user_guess, a_follower_count, b_follower_count)
+
+    # clear the screen for the next question.
+    clear()
+    print(logo)
 
     # Update score and provide feedback based on the correctness of the guess.
     if is_correct:
