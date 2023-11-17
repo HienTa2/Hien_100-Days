@@ -17,6 +17,7 @@ hien.penup()
 hien.setheading(225)
 hien.forward(300)
 hien.setheading(0)
+# Hide the turtle
 hien.hideturtle()
 
 # Draw 10x10 grid of dots
