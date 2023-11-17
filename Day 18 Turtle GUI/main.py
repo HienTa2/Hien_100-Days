@@ -44,7 +44,7 @@ for _ in range(0, 100):
     Hien.circle(100)
     current_heading = Hien.heading()
     Hien.setheading(current_heading + 10)
-    Hien.setheading(current_heading - 20)
+
 
 # To keep the window open
 t.done()
