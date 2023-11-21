@@ -10,6 +10,6 @@ medium_words = [
     'drawl', 'valley', 'squash', 'pouch', 'marble', 'gallon', 'plaza', 'putty', 'ignore', 'vision', 'squire', 'saucer',
     'gloam', 'engulf', 'wisdom', 'drawer', 'spacious', 'wheezy', 'fowl', 'awful', 'manual', 'thorax', 'bunions',
     'flummox', 'serene', 'fluke', 'salute', 'mantel', 'diode', 'quip', 'droll', 'arable', 'jugular', 'aura', 'thyroid',
-    'lasso', 'refuge', 'shoal', 'jeopardy', 'sauna', 'boba', 'bilge', 'aspirin', 'aptitude', 'divot', 'pixels', 'fens',
+    'lasso', 'refuge', 'shoal', 'jeopardy', 'sauna', 'boba', 'bilge',  'divot', 'pixels', 'fens',
     'haw', 'pews', 'wok', 'chasm', 'koi', 'incense', 'Macao', 'Assam', 'grebe', 'leks', 'coleus'
 ]
