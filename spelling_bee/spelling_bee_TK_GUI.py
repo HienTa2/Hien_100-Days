@@ -119,12 +119,16 @@ class CustomDialog(simpledialog.Dialog):
 
 
 # Function to use text-to-speech to pronounce the word
+# Function to pronounce a word using text-to-speech in a separate thread
 def say_word(word):
+    """Pronounce the given word using text-to-speech."""
+
     def run():
         engine = pyttsx3.init()
         engine.say(word)
         engine.runAndWait()
 
+    # Start the pronunciation in a separate thread to prevent blocking the UI
     Thread(target=run).start()
 
 

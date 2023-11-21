@@ -2,7 +2,7 @@ import random
 from Hangman_art import stages, logo
 from Hangman_words import word_list
 
-# sample word list
+# sample word list for testing
 # word_list = ["ardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
@@ -27,7 +27,7 @@ while "_" in display and lives > 0:
     else:
         guessed_letters.append(guess)  # Step 2: Add the guessed letter to the list.
 
-    # Check the chosen word's position and then if match, replace with the letter.
+    # Check the chosen word's position and then if matched, replace with the letter.
     for position in range(len(chosen_word)):
         letter = chosen_word[position]
         if letter == guess:
