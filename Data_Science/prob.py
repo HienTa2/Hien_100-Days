@@ -23,7 +23,7 @@ column_names = [
     'export-administration-act-south-africa'
 ]
 
-# Read the CSV data into a DataFrame
+# Read the CSV data into a DataFrame.
 df = pd.read_csv('house-votes-84.data', header=None, names=column_names)
 
 # Replace '?' with NaN to mark missing values
