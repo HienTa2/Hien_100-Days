@@ -62,7 +62,7 @@ golden_ratio = (1 + math.sqrt(5)) / 2  # Approximate golden ratio
 
 def draw_golden_spiral(turtle, number_of_squares):
     """Draw a golden spiral starting with Fibonacci squares."""
-    radius = 5  # Starting radius
+    radius = 20  # Starting radius, adjust the speed of the spiral
     for i in range(number_of_squares):
         draw_arc(turtle, radius, 90)  # Draw a quarter circle arc
         radius *= golden_ratio  # Increase radius for the next arc
@@ -77,7 +77,7 @@ fibonacci_turtle.hideturtle()
 fibonacci_turtle.speed(0)
 
 # Draw Fibonacci squares and spiral
-draw_fibonacci_squares(fibonacci_turtle, 5)  # Draw 8 Fibonacci squares
+draw_fibonacci_squares(fibonacci_turtle, 5)  # Draw number Fibonacci squares
 draw_golden_spiral(fibonacci_turtle, 10)  # Draw the golden spiral approximation
 
 # Finish drawing and wait for user to click to close the window
