@@ -15,9 +15,15 @@ import pandas
 #     print(temperature)
 
 
-# data = pandas.read_csv("weather_data.csv")
-# print(type(data))
-# print(data["temp"])
+data = pandas.read_csv("weather_data.csv")
+print(type(data))
+print(data[["temp", "condition"]])
+
+# Print the first 5 rows of the specified columns
+print(data[["temp", "condition"]].head())
+# Or, print the last 5 rows of the specified columns
+print(data[["temp", "condition"]].tail())
+
 
 # print(data["temp"].mean())
 # print(data["temp"].max())
@@ -45,13 +51,13 @@ import pandas
 # data.to_csv("new_data.csv")
 
 
-data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
-red_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
-black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
-print(grey_squirrels_count)
-print(red_squirrels_count)
-print(black_squirrels_count)
+# data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
+# red_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
+# print(grey_squirrels_count)
+# print(red_squirrels_count)
+# print(black_squirrels_count)
 
 # creating dataframe with the values count above.
 # data_dict = {
