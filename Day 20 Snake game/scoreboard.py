@@ -9,6 +9,7 @@ class Scoreboard(Turtle):
         """Initialize the scoreboard."""
         super().__init__()
         self.score = 0
+        self.high_score = 0
         self.color("white")
         self.hideturtle()  # Hide the turtle object, only show the text
         self.penup()
