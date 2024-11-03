@@ -1,0 +1,8 @@
+# Use the following command to authenticate your local environment to use Google Cloud services:
+gcloud auth application-default login
+
+# If you haven't already created a GCS bucket, you can do so using the GCP Console or via the command line:
+gsutil mb gs://etl-bucket-employee
+
+# Once the setup is complete and the script is ready, run the script using your Python environment:
+python extract.py
